@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container1">
+            <i id="thoughtDisplay"></i>
+            <p id="nameDisplay"></p>
+        </div>
+        <div class="horizontal-row"></div>
+        <div class="container2">
+            <button type="button" data-bs-toggle="modal" id="write" data-bs-target="#exampleModal">
+                Write your unique thought
+            </button>
+            <button id="prev">Prev</button>
+            <button id="next">Next</button>
+        </div>
+
+        <p style="margin-top: 20px;">Please refresh after saving the data.</p>
+  
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Write something!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        <form action="" onsubmit="handleSubmit(event)">
+                            <div class="mb-3">
+                                <label for="thought">Write your thought</label>
+                                <textarea  id="thought" class="form-control"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="name">Your name</label>
+                                <input type="text" id="name" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <input type="submit" value="Submit" class="modalBtn">
+                            </div>
+                        </form>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
